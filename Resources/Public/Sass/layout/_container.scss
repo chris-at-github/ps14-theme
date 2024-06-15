@@ -1,0 +1,87 @@
+.container {
+	&--outer {
+		padding-left: var(--container-spacing-x);
+		padding-right: var(--container-spacing-x);
+	}
+
+	&__inner {
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	// -------------------------------------------------------------------------------------------------------------------
+	// Laufweiten (Layout)
+
+  // Standard (einfache Einrueckung)
+  &--outer {
+    &.container--layout-0 > .container__inner {
+      max-width: var(--container-max-width);
+      padding-left: var(--container-indent-x-small);
+      padding-right: var(--container-indent-x-small);
+    }
+
+    // Schmale Laufweite (mittlere Einrueckung)
+    &.container--layout-1 > .container__inner {
+      max-width: var(--container-max-width);
+      padding-left: var(--container-indent-x-medium);
+      padding-right: var(--container-indent-x-medium);
+    }
+
+    // Breite Laufweite (keine Einrueckung, begrenzt auf 1480px)
+    &.container--layout-2 > .container__inner {
+      max-width: var(--container-max-width);
+    }
+
+    // Keine Begrenzung (laeuft ueber die gesamte Bildschirmbreite)
+    &.container--layout-3 {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    // Einrueckung links fuer Veranstaltungen = gleiche Einrueckung Sidebar Events
+    &.container--layout-4 > .container__inner {
+      max-width: var(--container-max-width);
+      padding-left: var(--container-indent-left-large);
+      padding-right: var(--container-indent-x-small);
+    }
+  }
+
+  // -------------------------------------------------------------------------------------------------------------------
+  // Abstaende
+  &--space-before-small,
+  &--space-before-medium,
+  &--space-before-large {
+    padding-top: 0.1px; // eventuelle Margins innerhalb spannen den Container auf
+  }
+
+  &--space-after-small,
+  &--space-after-medium,
+  &--space-after-large {
+    padding-bottom: 0.1px; // eventuelle Margins innerhalb spannen den Container auf
+  }
+
+  &--space-before-small > &__inner {
+    margin-top: var(--container-spacing-y--small);
+  }
+
+  &--space-before-medium > &__inner {
+    margin-top: var(--container-spacing-y--medium);
+  }
+
+  &--space-before-large > &__inner {
+    margin-top: var(--container-spacing-y--large);
+  }
+
+  &--space-after-small > &__inner {
+    margin-bottom: var(--container-spacing-y--small);
+  }
+
+  &--space-after-medium > &__inner {
+    margin-bottom: var(--container-spacing-y--medium);
+  }
+
+  &--space-after-large > &__inner {
+    margin-bottom: var(--container-spacing-y--large);
+  }
+}

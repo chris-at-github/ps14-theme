@@ -1,0 +1,19 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Main
+body {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: min-content 1fr min-content;
+  padding-top: var(--page-body-offset);
+  font-family: var(--font-family-default);
+  font-size: var(--font-size-default);
+  font-weight: var(--font-weight-default);
+  line-height: var(--font-lineheight-default);
+  color: var(--font-color-default);
+  text-align: left;
+}
+
+main {
+  width: 100%;
+}

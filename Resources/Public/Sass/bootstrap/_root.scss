@@ -1,0 +1,122 @@
+:root {
+  --color-background: #fff;
+	--color-font: #000;
+
+  //--color-primary--light: #f0f5fa;
+	//--color-primary: #6caddf;
+	//--color-primary--dark: #0f1e32;
+	//
+  //--color-secondary: #144182;
+
+	--color-interactive: #144182;
+  --color-interactive-hover: #af5aa0;
+	--color-interactive-focus: #af5aa0;
+	--color-interactive-outline: #af5aa0;
+
+	--focus-outline: 2px solid var(--color-interactive-outline);
+	--focus-outline-offset: 1px;
+
+	--font-family-default: 'Open Sans', Arial, sans-serif;
+	--font-size-default: #{rem(16px)};
+  --font-size-large: #{rem(22px)};
+  --font-size-medium: #{rem(18px)};
+	--font-size-small: #{rem(16px)};
+
+	--font-color-default: #0f1e32;
+  --font-color-secondary: #144182;
+	--font-weight-default: 400;
+	--font-weight-semibold: 600;
+	--font-weight-bold: 700;
+	--font-line-height-default: 1.4;
+
+  --header-font-family: var(--font-family-secondary);
+  --header-font-weight: 700;
+  --header-font-color: var(--font-color-default);
+  --header-lineheight: 1.2;
+  --header-1-font-size: #{rem(60px)};
+  --header-2-font-size: #{rem(40px)};
+  --header-3-font-size: #{rem(28px)};
+  --header-4-font-size: #{rem(20px)};
+  --header-5-font-size: #{rem(20px)};
+  --header-6-font-size: #{rem(20px)};
+
+  --bodytext-spacing-header: #{rem(30px)}; // Abstand zwischen Elementen zu Ueberschrift
+  --bodytext-spacing-element: #{rem(60px)}; // Abstand zwischen Elementen zu Elementen
+
+  --transition-duration-fast: 150ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
+  --transition-duration-default: 350ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
+
+	--container-max-width: #{rem(1480px)};
+	--container-spacing-x: #{rem(24px)};
+	--container-spacing-y--none: 0;
+	--container-spacing-y--small: #{rem(30px)};
+	--container-spacing-y--medium: #{rem(60px)};
+	--container-spacing-y--large: #{rem(90px)};
+	--container-indent-x-small: 0;
+	--container-indent-x-medium: 0;
+
+	--navigation-mobile-enabled: 0;
+	--navigation-desktop-enabled: 0;
+	--navigation-transition-duration: var(--transition-duration-default);
+
+	--navigation-group-padding: 0;
+	--navigation-group-gap: #{rem(16px)};
+	--navigation-group-direction: row;
+  --navigation-group-background: transparent;
+
+	--navigation-item-display: flex;
+	--navigation-item-padding: #{rem(4px 0)};
+	--navigation-item-font-family: var(--font-size-family);
+	--navigation-item-font-size: var(--font-size-default);
+	--navigation-item-font-weight: var(--font-weight-default);
+	--navigation-item-font-color: var(--color-interactive);
+	--navigation-item-textdecoration: none;
+	--navigation-item-background: transparent;
+	--navigation-item-hover-font-color: var(--color-interactive-hover);
+	--navigation-item-hover-textdecoration: underline;
+	--navigation-item-hover-background: transparent;
+	--navigation-item-focus-font-color: var(--color-interactive-focus);
+	--navigation-item-focus-background: transparent;
+	--navigation-item-focus-outline: 2px solid var(--navigation-item-focus-outline-color);
+	--navigation-item-focus-outline-color: var(--color-interactive-outline);
+	--navigation-item-focus-outline-offset: 0;
+	--navigation-item-active-font-color: var(--color-interactive-hover);
+	--navigation-item-active-background: transparent;
+	--navigation-item-active-textdecoration: none;
+	--navigation-item-active-hover-font-color: var(--navigation-item-hover-font-color);
+	--navigation-item-active-hover-textdecoration: var(--navigation-item-hover-textdecoration);
+	--navigation-item-active-hover-background: var(--navigation-item-hover-background);
+	--navigation-item-active-focus-font-color: var(--navigation-item-focus-font-color);
+	--navigation-item-active-focus-background: var(--navigation-item-focus-background);
+	--navigation-item-active-focus-outline: var(--navigation-item-focus-outline);
+	--navigation-item-active-focus-outline-color: var(--navigation-item-focus-outline-color);
+	--navigation-item-active-focus-outline-offset: var(--navigation-item-focus-outline-offset);
+	--navigation-item-icon-gap: #{rem(16px)};
+	--navigation-item-icon-size: #{rem(32px)};
+	--navigation-item-switch-rotate: 0deg;
+}
+
+// >= 768px
+@include media-breakpoint-up(md) {
+  :root {
+  }
+}
+
+// >= 992px
+@include media-breakpoint-up(lg) {
+  :root {
+		--font-size-default: #{rem(20px)};
+    --font-size-medium: #{rem(22px)};
+    --font-size-large: #{rem(26px)};
+
+    --container-spacing-x: #{rem(60px)};
+    --container-spacing-y--small: #{rem(30px)};
+    --container-spacing-y--medium: #{rem(100px)};
+    --container-spacing-y--large: #{rem(120px)};
+    --container-indent-x-small: #{rem(120px)};
+    --container-indent-x-medium: #{rem(330px)};
+  }
+}
+
+
+

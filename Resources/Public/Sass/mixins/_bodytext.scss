@@ -1,0 +1,108 @@
+@mixin bodytext {
+  h1 {
+    @extend .header-1;
+  }
+
+  h2 {
+    @extend .header-2;
+  }
+
+  h3 {
+    @extend .header-3;
+  }
+
+  h4 {
+    @extend .header-4;
+  }
+
+  h1, h2, h3, h4 {
+    & + p, & + ul, & + ol, & + table {
+      margin-top: var(--bodytext-spacing-header);
+    }
+  }
+
+  p, ul, ol, table {
+    & + p, & + ul, & + ol, & + table {
+      margin-top: var(--bodytext-spacing-element);
+    }
+
+    & + h2, & + h3, & + h4 {
+      margin-top: var(--bodytext-spacing-element);
+    }
+  }
+
+  a {
+    @extend .link;
+  }
+
+  a.link--internal {
+    @extend .link--internal;
+  }
+
+  a.link--external {
+    @extend .link--external;
+  }
+
+  a.link--button-internal {
+    @extend .button;
+    @extend .button--primary-outline;
+    @extend .button--internal;
+  }
+
+  a.link--button-external {
+    @extend .button;
+    @extend .button--primary-outline;
+    @extend .button--external;
+  }
+
+  ul:not(.list-navigation) {
+    @extend .list-default;
+
+    li {
+      @extend .list-default__element;
+    }
+  }
+
+  ul.list-navigation {
+    & {
+      @extend .list-navigation;
+    }
+
+    li {
+      @extend .list-navigation__item;
+    }
+
+    a {
+      @extend .list-navigation__link;
+    }
+  }
+
+  ol {
+    @extend .list-ordered;
+  }
+
+  table {
+    @extend .table;
+
+    tbody {
+      tr {
+        @extend .table__row;
+      }
+
+      td {
+        @extend .table__cell;
+      }
+    }
+
+    th {
+      @extend .table__header;
+    }
+  }
+
+  hr {
+    // Resetten der default hr styles auf der border, da wir sonst die farbe und die dicke nicht hinbekommen
+    border: none;
+    border-top: 1px solid var(--color-ruler);
+    margin: 2rem 0;
+  }
+}
