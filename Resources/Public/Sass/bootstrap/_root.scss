@@ -1,99 +1,142 @@
 :root {
-  --color-background: #fff;
-	--color-font: #000;
+	--spacing-100: #{rem(2px)};
+	--spacing-200: #{rem(4px)};
+	--spacing-300: #{rem(8px)};
+	--spacing-400: #{rem(12px)};
+	--spacing-500: #{rem(24px)};
+	--spacing-600: #{rem(48px)};
+	--spacing-700: #{rem(64px)};
+	--spacing-800: #{rem(96px)};
+	--spacing-900: #{rem(128px)};
 
-  //--color-primary--light: #f0f5fa;
-	//--color-primary: #6caddf;
-	//--color-primary--dark: #0f1e32;
-	//
-  //--color-secondary: #144182;
+	--color-gray-50: #eeeeee;
+	--color-gray-100: #d4d4d4;
+	--color-gray-200: #b8b8b8;
+	--color-gray-300: #9b9b9b;
+	--color-gray-400: #858585;
+	--color-gray-500: #707070;
+	--color-gray-600: #686868;
+	--color-gray-700: #5d5d5d;
+	--color-gray-800: #535353;
+	--color-gray-900: #414141;
 
-	--color-interactive: #144182;
-  --color-interactive-hover: #af5aa0;
-	--color-interactive-focus: #af5aa0;
-	--color-interactive-outline: #af5aa0;
+	--color-primary-50: #ffe7e4;
+	--color-primary-100: #ffc4bd;
+	--color-primary-200: #ff9d91;
+	--color-primary-300: #ff7564;
+	--color-primary-400: #ff5843;
+	--color-primary-500: #ff3a22;
+	--color-primary-600: #ff341e;
+	--color-primary-700: #ff2c19;
+	--color-primary-800: #ff2514;
+	--color-primary-900: #ff180c;
 
-	--focus-outline: 2px solid var(--color-interactive-outline);
+	--color-secondary-50: #e1e7ea;
+	--color-secondary-100: #b5c4cc;
+	--color-secondary-200: #849daa;
+	--color-secondary-300: #537587;
+	--color-secondary-400: #2e586e;
+	--color-secondary-500: #093a54;
+	--color-secondary-600: #08344d;
+	--color-secondary-700: #062c43;
+	--color-secondary-800: #05253a;
+	--color-secondary-900: #021829;
+
+	--color-background: #fff;
+	--color-font: var(--color-secondary-800);
+
+	--color-interactive: var(--color-primary-500);
+  --color-interactive-hover: var(--color-primary-900);
+	--color-interactive-focus: var(--color-primary-900);
+	--color-interactive-outline: #{hex-to-hsla(#ff180c, 0.5)};
+
+	--focus-outline-size: 3px;
+	--focus-outline-style: solid;
+	--focus-outline-color: var(--color-interactive-outline);
 	--focus-outline-offset: 1px;
 
-	--font-family-default: 'Open Sans', Arial, sans-serif;
-	--font-size-default: #{rem(16px)};
-  --font-size-large: #{rem(22px)};
-  --font-size-medium: #{rem(18px)};
-	--font-size-small: #{rem(16px)};
-
-	--font-color-default: #0f1e32;
-  --font-color-secondary: #144182;
-	--font-weight-default: 400;
+	--font-family-primary: 'Nunito Sans', Arial, sans-serif;
+	--font-weight-normal: 400;
 	--font-weight-semibold: 600;
-	--font-weight-bold: 700;
-	--font-line-height-default: 1.4;
+	--font-line-height: 1.4;
 
-  --header-font-family: var(--font-family-secondary);
-  --header-font-weight: 700;
-  --header-font-color: var(--font-color-default);
-  --header-lineheight: 1.2;
-  --header-1-font-size: #{rem(60px)};
-  --header-2-font-size: #{rem(40px)};
-  --header-3-font-size: #{rem(28px)};
-  --header-4-font-size: #{rem(20px)};
-  --header-5-font-size: #{rem(20px)};
-  --header-6-font-size: #{rem(20px)};
+	--font-size-100: #{rem(12px)};
+	--font-size-200: #{rem(14px)};
+	--font-size-300: #{rem(16px)};
+	--font-size-400: #{rem(18px)};
+	--font-size-500: #{rem(24px)};
+	--font-size-600: #{rem(32px)};
+	--font-size-700: #{rem(48px)};
+	--font-size-800: #{rem(64px)};
+	--font-size-900: #{rem(96px)};
 
-  --bodytext-spacing-header: #{rem(30px)}; // Abstand zwischen Elementen zu Ueberschrift
-  --bodytext-spacing-element: #{rem(60px)}; // Abstand zwischen Elementen zu Elementen
+  --header-font-family: var(--font-family-primary);
+  --header-font-weight: 600;
+  --header-font-color: var(--color-secondary-800);
+  --header-line-height: 1.2;
+  --header-1-font-size: var(--font-size-700);
+  --header-2-font-size: var(--font-size-600);
+  --header-3-font-size: var(--font-size-500);
+  --header-4-font-size: var(--font-size-400);
+  --header-5-font-size: var(--font-size-400);
+  --header-6-font-size: var(--font-size-400);
+
+  --bodytext-spacing-header: var(--spacing-400); // Abstand zwischen Elementen zu Ueberschrift
+  --bodytext-spacing-element: var(--spacing-500); // Abstand zwischen Elementen zu Elementen
 
   --transition-duration-fast: 150ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
   --transition-duration-default: 350ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
 
+	--page-body-offset: #{rem(48px)};
+
 	--container-max-width: #{rem(1480px)};
-	--container-spacing-x: #{rem(24px)};
+	--container-spacing-x: var(--spacing-500);
 	--container-spacing-y--none: 0;
-	--container-spacing-y--small: #{rem(30px)};
-	--container-spacing-y--medium: #{rem(60px)};
-	--container-spacing-y--large: #{rem(90px)};
+	--container-spacing-y--small: var(--spacing-500);
+	--container-spacing-y--medium: var(--spacing-600);
+	--container-spacing-y--large: var(--spacing-700);
 	--container-indent-x-small: 0;
 	--container-indent-x-medium: 0;
 
-	--navigation-mobile-enabled: 0;
-	--navigation-desktop-enabled: 0;
-	--navigation-transition-duration: var(--transition-duration-default);
-
-	--navigation-group-padding: 0;
-	--navigation-group-gap: #{rem(16px)};
-	--navigation-group-direction: row;
-  --navigation-group-background: transparent;
-
-	--navigation-item-display: flex;
-	--navigation-item-padding: #{rem(4px 0)};
-	--navigation-item-font-family: var(--font-size-family);
-	--navigation-item-font-size: var(--font-size-default);
-	--navigation-item-font-weight: var(--font-weight-default);
-	--navigation-item-font-color: var(--color-interactive);
-	--navigation-item-textdecoration: none;
-	--navigation-item-background: transparent;
-	--navigation-item-hover-font-color: var(--color-interactive-hover);
-	--navigation-item-hover-textdecoration: underline;
-	--navigation-item-hover-background: transparent;
-	--navigation-item-focus-font-color: var(--color-interactive-focus);
-	--navigation-item-focus-background: transparent;
-	--navigation-item-focus-outline: 2px solid var(--navigation-item-focus-outline-color);
-	--navigation-item-focus-outline-color: var(--color-interactive-outline);
-	--navigation-item-focus-outline-offset: 0;
-	--navigation-item-active-font-color: var(--color-interactive-hover);
-	--navigation-item-active-background: transparent;
-	--navigation-item-active-textdecoration: none;
-	--navigation-item-active-hover-font-color: var(--navigation-item-hover-font-color);
-	--navigation-item-active-hover-textdecoration: var(--navigation-item-hover-textdecoration);
-	--navigation-item-active-hover-background: var(--navigation-item-hover-background);
-	--navigation-item-active-focus-font-color: var(--navigation-item-focus-font-color);
-	--navigation-item-active-focus-background: var(--navigation-item-focus-background);
-	--navigation-item-active-focus-outline: var(--navigation-item-focus-outline);
-	--navigation-item-active-focus-outline-color: var(--navigation-item-focus-outline-color);
-	--navigation-item-active-focus-outline-offset: var(--navigation-item-focus-outline-offset);
-	--navigation-item-icon-gap: #{rem(16px)};
-	--navigation-item-icon-size: #{rem(32px)};
-	--navigation-item-switch-rotate: 0deg;
+	//--navigation-mobile-enabled: 0;
+	//--navigation-desktop-enabled: 0;
+	//--navigation-transition-duration: var(--transition-duration-default);
+	//
+	//--navigation-group-padding: 0;
+	//--navigation-group-gap: #{rem(16px)};
+	//--navigation-group-direction: row;
+  //--navigation-group-background: transparent;
+	//
+	//--navigation-item-display: flex;
+	//--navigation-item-padding: #{rem(4px 0)};
+	//--navigation-item-font-family: var(--font-size-family);
+	//--navigation-item-font-size: var(--font-size-default);
+	//--navigation-item-font-weight: var(--font-weight-default);
+	//--navigation-item-font-color: var(--color-interactive);
+	//--navigation-item-textdecoration: none;
+	//--navigation-item-background: transparent;
+	//--navigation-item-hover-font-color: var(--color-interactive-hover);
+	//--navigation-item-hover-textdecoration: underline;
+	//--navigation-item-hover-background: transparent;
+	//--navigation-item-focus-font-color: var(--color-interactive-focus);
+	//--navigation-item-focus-background: transparent;
+	//--navigation-item-focus-outline: 2px solid var(--navigation-item-focus-outline-color);
+	//--navigation-item-focus-outline-color: var(--color-interactive-outline);
+	//--navigation-item-focus-outline-offset: 0;
+	//--navigation-item-active-font-color: var(--color-interactive-hover);
+	//--navigation-item-active-background: transparent;
+	//--navigation-item-active-textdecoration: none;
+	//--navigation-item-active-hover-font-color: var(--navigation-item-hover-font-color);
+	//--navigation-item-active-hover-textdecoration: var(--navigation-item-hover-textdecoration);
+	//--navigation-item-active-hover-background: var(--navigation-item-hover-background);
+	//--navigation-item-active-focus-font-color: var(--navigation-item-focus-font-color);
+	//--navigation-item-active-focus-background: var(--navigation-item-focus-background);
+	//--navigation-item-active-focus-outline: var(--navigation-item-focus-outline);
+	//--navigation-item-active-focus-outline-color: var(--navigation-item-focus-outline-color);
+	//--navigation-item-active-focus-outline-offset: var(--navigation-item-focus-outline-offset);
+	//--navigation-item-icon-gap: #{rem(16px)};
+	//--navigation-item-icon-size: #{rem(32px)};
+	//--navigation-item-switch-rotate: 0deg;
 }
 
 // >= 768px
@@ -105,16 +148,16 @@
 // >= 992px
 @include media-breakpoint-up(lg) {
   :root {
-		--font-size-default: #{rem(20px)};
-    --font-size-medium: #{rem(22px)};
-    --font-size-large: #{rem(26px)};
-
-    --container-spacing-x: #{rem(60px)};
-    --container-spacing-y--small: #{rem(30px)};
-    --container-spacing-y--medium: #{rem(100px)};
-    --container-spacing-y--large: #{rem(120px)};
-    --container-indent-x-small: #{rem(120px)};
-    --container-indent-x-medium: #{rem(330px)};
+		//--font-size-default: #{rem(20px)};
+    //--font-size-medium: #{rem(22px)};
+    //--font-size-large: #{rem(26px)};
+		//
+    //--container-spacing-x: #{rem(60px)};
+    //--container-spacing-y--small: #{rem(30px)};
+    //--container-spacing-y--medium: #{rem(100px)};
+    //--container-spacing-y--large: #{rem(120px)};
+    //--container-indent-x-small: #{rem(120px)};
+    //--container-indent-x-medium: #{rem(330px)};
   }
 }
 
