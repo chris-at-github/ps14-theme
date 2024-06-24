@@ -20,16 +20,16 @@
 	--color-gray-800: #535353;
 	--color-gray-900: #414141;
 
-	--color-primary-50: #ffe7e4;
-	--color-primary-100: #ffc4bd;
-	--color-primary-200: #ff9d91;
-	--color-primary-300: #ff7564;
-	--color-primary-400: #ff5843;
-	--color-primary-500: #ff3a22;
-	--color-primary-600: #ff341e;
-	--color-primary-700: #ff2c19;
-	--color-primary-800: #ff2514;
-	--color-primary-900: #ff180c;
+	--color-primary-50: #f7e2e9;
+	--color-primary-100: #ebb6c7;
+	--color-primary-200: #dd85a2;
+	--color-primary-300: #cf547c;
+	--color-primary-400: #c53060;
+	--color-primary-500: #bb0b44;
+	--color-primary-600: #b50a3e;
+	--color-primary-700: #ac0835;
+	--color-primary-800: #a4062d;
+	--color-primary-900: #96031f;
 
 	--color-secondary-50: #e1e7ea;
 	--color-secondary-100: #b5c4cc;
@@ -48,7 +48,7 @@
 	--color-interactive: var(--color-primary-500);
   --color-interactive-hover: var(--color-primary-900);
 	--color-interactive-focus: var(--color-primary-900);
-	--color-interactive-outline: #{hex-to-hsla(#ff180c, 0.5)};
+	--color-interactive-outline: #{hex-to-hsla(#b50a3e, 0.5)};
 
 	--focus-outline-size: 3px;
 	--focus-outline-style: solid;
@@ -58,13 +58,15 @@
 	--font-family-primary: 'Nunito Sans', Arial, sans-serif;
 	--font-weight-normal: 400;
 	--font-weight-semibold: 600;
-	--font-line-height: 1.4;
+	--font-line-height: 1.6;
+
+	--font-size-default: #{rem(18px)};
 
 	--font-size-100: #{rem(12px)};
 	--font-size-200: #{rem(14px)};
-	--font-size-300: #{rem(16px)};
-	--font-size-400: #{rem(18px)};
-	--font-size-500: #{rem(24px)};
+	--font-size-300: #{rem(18px)};
+	--font-size-400: #{rem(22px)};
+	--font-size-500: #{rem(26px)};
 	--font-size-600: #{rem(32px)};
 	--font-size-700: #{rem(48px)};
 	--font-size-800: #{rem(64px)};
@@ -74,12 +76,12 @@
   --header-font-weight: 600;
   --header-font-color: var(--color-secondary-800);
   --header-line-height: 1.2;
-  --header-1-font-size: var(--font-size-700);
-  --header-2-font-size: var(--font-size-600);
-  --header-3-font-size: var(--font-size-500);
-  --header-4-font-size: var(--font-size-400);
-  --header-5-font-size: var(--font-size-400);
-  --header-6-font-size: var(--font-size-400);
+  --header-1-font-size: #{rem(32px)};
+  --header-2-font-size: var(--font-size-500);
+  --header-3-font-size: var(--font-size-400);
+  --header-4-font-size: var(--font-size-300);
+  --header-5-font-size: var(--font-size-300);
+  --header-6-font-size: var(--font-size-300);
 
   --bodytext-spacing-header: var(--spacing-400); // Abstand zwischen Elementen zu Ueberschrift
   --bodytext-spacing-element: var(--spacing-500); // Abstand zwischen Elementen zu Elementen
@@ -94,9 +96,8 @@
 	--container-spacing-y--none: 0;
 	--container-spacing-y--small: var(--spacing-500);
 	--container-spacing-y--medium: var(--spacing-600);
-	--container-spacing-y--large: var(--spacing-700);
-	--container-indent-x-small: 0;
-	--container-indent-x-medium: 0;
+	--container-spacing-y--large: var(--spacing-800);
+	--container-indent-x: 0;
 
 	//--navigation-mobile-enabled: 0;
 	//--navigation-desktop-enabled: 0;
@@ -142,23 +143,28 @@
 // >= 768px
 @include media-breakpoint-up(md) {
   :root {
+		--container-spacing-x: var(--spacing-600);
+		--container-indent-x: #{rem(96px)};
   }
 }
 
 // >= 992px
 @include media-breakpoint-up(lg) {
   :root {
-		//--font-size-default: #{rem(20px)};
-    //--font-size-medium: #{rem(22px)};
-    //--font-size-large: #{rem(26px)};
-		//
-    //--container-spacing-x: #{rem(60px)};
-    //--container-spacing-y--small: #{rem(30px)};
-    //--container-spacing-y--medium: #{rem(100px)};
-    //--container-spacing-y--large: #{rem(120px)};
-    //--container-indent-x-small: #{rem(120px)};
-    //--container-indent-x-medium: #{rem(330px)};
+		--container-spacing-y--medium: var(--spacing-700);
+		--container-spacing-y--large: var(--spacing-800);
+
+		--header-1-font-size: #{rem(36px)};
+		--header-2-font-size: var(--font-size-600);
+		--header-3-font-size: var(--font-size-500);
   }
+}
+
+// >= 1200px
+@include media-breakpoint-up(xl) {
+	:root {
+		--container-indent-x: #{rem(256px)};
+	}
 }
 
 

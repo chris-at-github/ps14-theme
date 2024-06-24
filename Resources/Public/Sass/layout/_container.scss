@@ -24,26 +24,20 @@
     // Schmale Laufweite (mittlere Einrueckung)
     &.container--layout-1 > .container__inner {
       max-width: var(--container-max-width);
-      padding-left: var(--container-indent-x-medium);
-      padding-right: var(--container-indent-x-medium);
+      padding-left: var(--container-indent-x);
+      padding-right: var(--container-indent-x);
     }
 
     // Breite Laufweite (keine Einrueckung, begrenzt auf 1480px)
-    &.container--layout-2 > .container__inner {
-      max-width: var(--container-max-width);
-    }
+    &.container--layout-2 {
+      & {
+        padding-left: 0;
+        padding-right: 0;
+      }
 
-    // Keine Begrenzung (laeuft ueber die gesamte Bildschirmbreite)
-    &.container--layout-3 {
-      padding-left: 0;
-      padding-right: 0;
-    }
-
-    // Einrueckung links fuer Veranstaltungen = gleiche Einrueckung Sidebar Events
-    &.container--layout-4 > .container__inner {
-      max-width: var(--container-max-width);
-      padding-left: var(--container-indent-left-large);
-      padding-right: var(--container-indent-x-small);
+      & > .container__inner {
+        max-width: 100%;
+      }
     }
   }
 

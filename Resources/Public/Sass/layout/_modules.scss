@@ -1,0 +1,51 @@
+@use "sass:math";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Ueberschriften
+.ce-header {
+	&--layout-1 {
+		.ce-header__title {
+			@extend .header-1;
+		}
+	}
+
+	&--layout-2 {
+		.ce-header__title  {
+			@extend .header-2;
+		}
+	}
+
+	&--layout-3 {
+		.ce-header__title  {
+			@extend .header-3;
+		}
+	}
+
+	&--layout-4 {
+		.ce-header__title {
+			@extend .header-4;
+		}
+	}
+
+	&__title {
+		&--align-left {
+			text-align: left;
+		}
+
+		&--align-center {
+			text-align: center;
+		}
+
+		&--align-right {
+			text-align: right;
+		}
+	}
+
+	& + .ce-bodytext {
+		margin-top: var(--bodytext-spacing-header);
+	}
+}
+
+.ce-bodytext {
+	@include bodytext();
+}
