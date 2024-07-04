@@ -12,24 +12,28 @@
 
 	// -------------------------------------------------------------------------------------------------------------------
 	// Laufweiten (Layout)
-
-  // Standard (einfache Einrueckung)
   &--outer {
+
+    // 0: keine Einrueckung, maximale Laufweite
     &.container--layout-0 > .container__inner {
       max-width: var(--container-max-width);
-      padding-left: var(--container-indent-x-small);
-      padding-right: var(--container-indent-x-small);
     }
 
-    // Schmale Laufweite (mittlere Einrueckung)
+    // 1: beiseitig eingerueckt, maximale Laufweite
     &.container--layout-1 > .container__inner {
       max-width: var(--container-max-width);
       padding-left: var(--container-indent-x);
       padding-right: var(--container-indent-x);
     }
 
-    // Breite Laufweite (keine Einrueckung, begrenzt auf 1480px)
-    &.container--layout-2 {
+    // 2: links eingerueckt, maximale Laufweite
+    &.container--layout-2 > .container__inner {
+      max-width: var(--container-max-width);
+      padding-left: var(--container-indent-x);
+    }
+
+    // keine Einrueckung, volle Laufweite
+    &.container--layout-3 {
       & {
         padding-left: 0;
         padding-right: 0;

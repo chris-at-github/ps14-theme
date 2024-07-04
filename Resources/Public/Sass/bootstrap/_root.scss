@@ -61,37 +61,36 @@
 	--font-line-height: 1.6;
 
 	--font-size-default: #{rem(18px)};
-
-	--font-size-100: #{rem(12px)};
-	--font-size-200: #{rem(14px)};
-	--font-size-300: #{rem(18px)};
-	--font-size-400: #{rem(22px)};
-	--font-size-500: #{rem(26px)};
-	--font-size-600: #{rem(32px)};
-	--font-size-700: #{rem(48px)};
-	--font-size-800: #{rem(64px)};
-	--font-size-900: #{rem(96px)};
+	--font-size-100: #{rem(12px)}; // not in use
+	--font-size-200: #{rem(12px)};
+	--font-size-300: #{rem(15px)};
+	--font-size-400: #{rem(18px)};
+	--font-size-500: #{rem(21px)};
+	--font-size-600: #{rem(23px)};
+	--font-size-700: #{rem(28px)};
+	--font-size-800: #{rem(28px)}; // not in use
+	--font-size-900: #{rem(28px)}; // not in use
 
   --header-font-family: var(--font-family-primary);
   --header-font-weight: 600;
   --header-font-color: var(--color-secondary-800);
   --header-line-height: 1.2;
-  --header-1-font-size: #{rem(32px)};
-  --header-2-font-size: var(--font-size-500);
-  --header-3-font-size: var(--font-size-400);
-  --header-4-font-size: var(--font-size-300);
-  --header-5-font-size: var(--font-size-300);
-  --header-6-font-size: var(--font-size-300);
+  --header-1-font-size: var(--font-size-700);
+  --header-2-font-size: var(--font-size-600);
+  --header-3-font-size: var(--font-size-500);
+  --header-4-font-size: var(--font-size-400);
+  --header-5-font-size: var(--font-size-400);
+  --header-6-font-size: var(--font-size-400);
 
-  --bodytext-spacing-header: var(--spacing-400); // Abstand zwischen Elementen zu Ueberschrift
-  --bodytext-spacing-element: var(--spacing-500); // Abstand zwischen Elementen zu Elementen
+  --bodytext-spacing-header: var(--spacing-500); // Abstand zwischen Elementen zu Ueberschrift
+  --bodytext-spacing-element: var(--spacing-600); // Abstand zwischen Elementen zu Elementen
 
   --transition-duration-fast: 150ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
   --transition-duration-default: 350ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
 
 	--page-body-offset: #{rem(48px)};
 
-	--container-max-width: #{rem(1480px)};
+	--container-max-width: #{rem(1376px)}; // 1280px + 48px + 48px
 	--container-spacing-x: var(--spacing-500);
 	--container-spacing-y--none: 0;
 	--container-spacing-y--small: var(--spacing-500);
@@ -144,7 +143,6 @@
 @include media-breakpoint-up(md) {
   :root {
 		--container-spacing-x: var(--spacing-600);
-		--container-indent-x: #{rem(96px)};
   }
 }
 
@@ -153,17 +151,19 @@
   :root {
 		--container-spacing-y--medium: var(--spacing-700);
 		--container-spacing-y--large: var(--spacing-800);
+		--container-indent-x: #{rem(80px)};
 
-		--header-1-font-size: #{rem(36px)};
-		--header-2-font-size: var(--font-size-600);
-		--header-3-font-size: var(--font-size-500);
+		--bodytext-spacing-element: var(--spacing-700); // Abstand zwischen Elementen zu Elementen
+
+		--font-size-600: #{rem(26px)};
+		--font-size-700: #{rem(38px)};
   }
 }
 
 // >= 1200px
 @include media-breakpoint-up(xl) {
 	:root {
-		--container-indent-x: #{rem(256px)};
+		--container-indent-x: #{rem(220x)};
 	}
 }
 
