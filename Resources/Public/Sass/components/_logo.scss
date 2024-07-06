@@ -1,0 +1,21 @@
+:root {
+	--logo-container-size: #{rem(64px)};
+	--logo-container-width: var(--logo-container-size);
+	--logo-container-height: var(--logo-container-size);
+
+	--logo-size: 100%;
+	--logo-width: var(--logo-size);
+	--logo-height: var(--logo-size);
+}
+
+.logo-container {
+	display: flex;
+	width: var(--logo-container-width);
+	height: var(--logo-container-height);
+}
+
+.logo {
+	display: flex;
+	width: var(--logo-width);
+	height: var(--logo-height);
+}

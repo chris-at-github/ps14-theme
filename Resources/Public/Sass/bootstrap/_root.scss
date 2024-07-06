@@ -88,7 +88,8 @@
   --transition-duration-fast: 150ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
   --transition-duration-default: 350ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
 
-	--page-body-offset: #{rem(48px)};
+	--page-header-height: #{rem(88px)};
+	--page-body-offset: #{rem(100px)};
 
 	--container-max-width: #{rem(1376px)}; // 1280px + 48px + 48px
 	--container-spacing-x: var(--spacing-500);
