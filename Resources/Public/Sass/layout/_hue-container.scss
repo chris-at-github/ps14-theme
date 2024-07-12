@@ -1,0 +1,11 @@
+.hue-container {
+	color: var(--color-font);
+	background-color: var(--color-background);
+}
+
+.hue-container--secondary-light {
+	--color-font: var(--color-secondary-500);
+	--color-background: var(--color-secondary-50);
+	--color-interactive: var(--color-secondary-500);
+	--color-interactive-hover: var(--color-secondary-900);
+}
