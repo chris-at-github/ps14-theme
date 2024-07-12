@@ -1,0 +1,62 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// CSS Variablen
+.navigation {
+	--navigation-group-margin: #{rem(0 -12px)}; // 10px sind Ausgleich fuer das Padding -> groessere Klickflaeche
+	--navigation-group-padding: 0;
+	--navigation-group-gap: #{rem(4px)};
+	--navigation-group-direction: row;
+	--navigation-group-background: transparent;
+
+	--navigation-item-display: flex;
+	--navigation-item-padding: #{rem(4px 12px)};
+	--navigation-item-font-size: inherit;
+	--navigation-item-font-weight: var(--font-weight-default);
+	--navigation-item-font-color: var(--color-interactive);
+	--navigation-item-textdecoration: none;
+	--navigation-item-background: transparent;
+	--navigation-item-active-font-color: var(--color-interactive-hover);
+	--navigation-item-active-textdecoration: none;
+	--navigation-item-active-background: transparent;
+	--navigation-item-focus-outline: var(--focus-outline-size) var(--focus-outline-style) var(--focus-outline-color);
+	--navigation-item-focus-outline-color: var(--focus-outline-color);
+	--navigation-item-focus-outline-offset: var(--focus-outline-offset);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Navigation Group
+.navigation__group {
+	display: flex;
+	flex-direction: var(--navigation-group-direction);
+	gap: var(--navigation-group-gap);
+	margin: var(--navigation-group-margin);
+	padding: var(--navigation-group-padding);
+	background: var(--navigation-group-background);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Navigation Item
+.navigation-item {
+	& {
+		display: var(--navigation-item-display);
+		padding: var(--navigation-item-padding);
+		background: var(--navigation-item-background);
+		font-size: var(--navigation-item-font-size);
+		font-weight: var(--navigation-item-font-weight);
+		color: var(--navigation-item-font-color);
+		text-decoration: var(--navigation-item-text-decoration);
+	}
+
+	&:hover {
+		background: var(--navigation-item-active-background);
+		color: var(--navigation-item-active-font-color);
+		text-decoration: var(--navigation-item-active-text-decoration);
+	}
+
+	&:focus-visible {
+		color: var(--navigation-item-active-font-color);
+		outline: var(--navigation-item-focus-outline);
+		outline-color: var(--navigation-item-active-outline-color);
+		outline-offset: var(--navigation-item-focus-outline-offset);
+		background: var(--navigation-item-active-background);
+	}
+}
