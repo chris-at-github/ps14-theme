@@ -10,6 +10,18 @@
 		margin-right: auto;
 	}
 
+  // -------------------------------------------------------------------------------------------------------------------
+  // Text Layout
+  // Vor Layout -> Laufweiten werden nochmals durch das Layoutfeld beeinflusst -> keine doppelte Einrueckung
+  &--text-layout-default {
+    --bodytext-indent-x: 0;
+  }
+
+  &--text-layout-indent {
+    --ce-indent-text-l: var(--container-indent-x);
+    --ce-indent-text-r: var(--container-indent-x);
+  }
+
 	// -------------------------------------------------------------------------------------------------------------------
 	// Laufweiten (Layout)
   &--outer {
@@ -21,13 +33,21 @@
 
     // 1: beiseitig eingerueckt, maximale Laufweite
     &.container--layout-1 > .container__inner {
-      max-width: var(--container-max-width);
-      padding-left: var(--container-indent-x);
-      padding-right: var(--container-indent-x);
+      --ce-indent-text-l: 0;
+      --ce-indent-text-r: 0;
+
+      & {
+        max-width: var(--container-max-width);
+        padding-left: var(--container-indent-x);
+        padding-right: var(--container-indent-x);
+      }
     }
 
     // 2: links eingerueckt, maximale Laufweite
     &.container--layout-2 > .container__inner {
+      --ce-indent-text-l: 0;
+      --ce-indent-text-r: var(--container-indent-x);
+
       max-width: var(--container-max-width);
       padding-left: var(--container-indent-x);
     }

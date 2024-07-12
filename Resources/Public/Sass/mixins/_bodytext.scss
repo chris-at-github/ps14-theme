@@ -17,17 +17,17 @@
 
   h1, h2, h3, h4 {
     & + p, & + ul, & + ol, & + table {
-      margin-top: var(--bodytext-spacing-header);
+      margin-top: var(--ce-spacing-header);
     }
   }
 
   p, ul, ol, table {
     & + p, & + ul, & + ol, & + table {
-      margin-top: var(--bodytext-spacing-element);
+      margin-top: var(--ce-spacing-element);
     }
 
     & + h2, & + h3, & + h4 {
-      margin-top: var(--bodytext-spacing-element);
+      margin-top: var(--ce-spacing-element);
     }
   }
 

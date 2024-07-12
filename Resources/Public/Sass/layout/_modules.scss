@@ -42,10 +42,20 @@
 	}
 
 	& + .ce-bodytext {
-		margin-top: var(--bodytext-spacing-header);
+		margin-top: var(--ce-spacing-header);
 	}
 }
 
+// ---------------------------------------------------------------------------------------------------------------------
+// Bodytext
 .ce-bodytext {
 	@include bodytext();
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Einrueckung
+.ce-header,
+.ce-bodytext {
+	padding-left: var(--ce-indent-text-l);
+	padding-right: var(--ce-indent-text-r);
 }

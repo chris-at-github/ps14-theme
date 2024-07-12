@@ -82,8 +82,11 @@
   --header-5-font-size: var(--font-size-400);
   --header-6-font-size: var(--font-size-400);
 
-  --bodytext-spacing-header: var(--spacing-500); // Abstand zwischen Elementen zu Ueberschrift
-  --bodytext-spacing-element: var(--spacing-600); // Abstand zwischen Elementen zu Elementen
+  --ce-spacing-header: var(--spacing-500); // Abstand zwischen Elementen zu Ueberschrift
+  --ce-spacing-element: var(--spacing-500); // Abstand zwischen Elementen zu Elementen z.B. p + ul
+  --ce-spacing-block: var(--spacing-600); // Abstand zwischen Elementen zu Sonderelementen z.B. .media-container
+  --ce-indent-text-l: 0; // Einrueckung (links) von Texten und Ueberschriften
+  --ce-indent-text-r: 0; // Einrueckung (links) von Texten und Ueberschriften
 
   --transition-duration-fast: 150ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
   --transition-duration-default: 350ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
@@ -154,7 +157,7 @@
 		--container-spacing-y--large: var(--spacing-800);
 		--container-indent-x: #{rem(80px)};
 
-		--bodytext-spacing-element: var(--spacing-700); // Abstand zwischen Elementen zu Elementen
+		--ce-spacing-block: var(--spacing-700); // Abstand zwischen Elementen zu Sonderelementen z.B. media-container
 
 		--font-size-600: #{rem(26px)};
 		--font-size-700: #{rem(38px)};
