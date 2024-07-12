@@ -89,7 +89,7 @@
   --transition-duration-default: 350ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
 
 	--page-header-height: #{rem(88px)};
-	--page-body-offset: #{rem(100px)};
+	--page-body-offset: #{rem(88px)};
 
 	--container-max-width: #{rem(1376px)}; // 1280px + 48px + 48px
 	--container-spacing-x: var(--spacing-500);
@@ -164,7 +164,7 @@
 // >= 1200px
 @include media-breakpoint-up(xl) {
 	:root {
-		--container-indent-x: #{rem(220x)};
+		--container-indent-x: #{rem(220px)};
 	}
 }
 
