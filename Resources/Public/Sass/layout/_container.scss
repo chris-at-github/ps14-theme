@@ -103,3 +103,27 @@
     margin-bottom: var(--container-spacing-y--large);
   }
 }
+
+// -------------------------------------------------------------------------------------------------------------------
+// Sonderregeln
+.page__main {
+  & > .container--space-before-auto:first-child {
+    & {
+      padding-top: 0.1px;
+    }
+
+    .container__inner {
+      margin-top: var(--container-spacing-y--medium);
+    }
+  }
+
+  & > .container--space-after-auto:last-child {
+    & {
+      padding-bottom: 0.1px;
+    }
+
+    .container__inner {
+      margin-bottom: var(--container-spacing-y--medium);
+    }
+  }
+}
