@@ -2,27 +2,27 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Ueberschriften
-.ce-header {
+.ce-heading {
 	&--layout-1 {
-		.ce-header__title {
+		.ce-heading__title {
 			@extend .header-1;
 		}
 	}
 
 	&--layout-2 {
-		.ce-header__title  {
+		.ce-heading__title  {
 			@extend .header-2;
 		}
 	}
 
 	&--layout-3 {
-		.ce-header__title  {
+		.ce-heading__title  {
 			@extend .header-3;
 		}
 	}
 
 	&--layout-4 {
-		.ce-header__title {
+		.ce-heading__title {
 			@extend .header-4;
 		}
 	}
@@ -42,7 +42,7 @@
 	}
 
 	& + .ce-bodytext {
-		margin-top: var(--ce-spacing-header);
+		margin-top: var(--ce-spacing-heading);
 	}
 }
 
@@ -54,7 +54,7 @@
 
 // ---------------------------------------------------------------------------------------------------------------------
 // Einrueckung
-.ce-header,
+.ce-heading,
 .ce-bodytext {
 	padding-left: var(--ce-indent-text-l);
 	padding-right: var(--ce-indent-text-r);
