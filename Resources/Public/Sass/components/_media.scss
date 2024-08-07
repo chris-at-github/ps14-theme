@@ -1,0 +1,25 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Variables
+:root {
+	--image-width: auto;
+	--image-height: auto;
+	--image-object-fit: none;
+	--image-object-position: center center;
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Image
+.image {
+	&__object {
+		width: var(--image-width);
+		height: var(--image-height);
+		object-fit: var(--image-object-fit);
+		object-position: var(--image-object-position);
+	}
+}
+
+.image--cover {
+	--image-width: 100%;
+	--image-height: 100%;
+	--image-object-fit: cover;
+}
