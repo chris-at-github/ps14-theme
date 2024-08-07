@@ -33,3 +33,32 @@
 		z-index: 5;
 	}
 }
+
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Layouts
+
+// Layout 0
+// Bild laeuft ueber die gesamte Breite, Text laeuft uber die volle Content-Laufweite und ist mittig zentriert
+.hero--layout-0 {
+	& {
+		padding-left: var(--container-spacing-x);
+		padding-right: var(--container-spacing-x);
+	}
+
+	.hero__body {
+		width: 100%;
+		max-width: var(--container-max-width);
+		margin-left: auto;
+		margin-right: auto;
+		align-self: self-end;
+	}
+}
+
+// >= 768px
+@include media-breakpoint-up(md) {
+	:root {
+		--hero-height: #{rem(400px)};
+		--hero-apect-ratio: auto;
+	}
+}
