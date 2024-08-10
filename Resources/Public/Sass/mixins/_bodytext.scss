@@ -31,9 +31,19 @@
     }
   }
 
-  //a {
-  //  @extend .link;
-  //}
+  a {
+    & {
+      @extend %link-default;
+    }
+
+    &:hover {
+      @extend %link-default-hover;
+    }
+
+    &:focus-visible {
+      @extend %link-default-focus;
+    }
+  }
   //
   //a.link--internal {
   //  @extend .link--internal;
