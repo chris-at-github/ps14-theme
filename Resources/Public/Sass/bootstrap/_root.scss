@@ -91,7 +91,7 @@
   --transition-duration-fast: 150ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
   --transition-duration-default: 350ms; // In Millisekunden angeben -> macht das umrechnen in JS leichter
 
-	--page-header-height: #{rem(88px)};
+	--page-header-height: #{rem(64px)};
 	--page-body-offset: #{rem(88px)};
 
 	--container-max-width: #{rem(1376px)}; // 1280px + 48px + 48px
@@ -101,6 +101,9 @@
 	--container-spacing-y--medium: var(--spacing-600);
 	--container-spacing-y--large: var(--spacing-800);
 	--container-indent-x: 0;
+
+	--border-radius-small: 3px;
+	--border-radius-medium: 8px;
 
 	//--navigation-mobile-enabled: 0;
 	//--navigation-desktop-enabled: 0;
@@ -147,6 +150,7 @@
 @include media-breakpoint-up(md) {
   :root {
 		--container-spacing-x: var(--spacing-600);
+		--page-header-height: #{rem(144px)};
   }
 }
 
