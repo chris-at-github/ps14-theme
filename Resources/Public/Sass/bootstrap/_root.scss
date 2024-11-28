@@ -60,7 +60,7 @@
 	--font-weight-semibold: 500;
 	--font-line-height: 1.6;
 
-	--font-size-default: #{rem(18px)};
+	--font-size-default: #{rem(16px)};
 	--font-size-100: #{rem(12px)}; // not in use
 	--font-size-200: #{rem(12px)};
 	--font-size-300: #{rem(16px)};
@@ -68,11 +68,11 @@
 	--font-size-500: #{rem(21px)};
 	--font-size-600: #{rem(23px)};
 	--font-size-700: #{rem(28px)};
-	--font-size-800: #{rem(28px)}; // not in use
-	--font-size-900: #{rem(28px)}; // not in use
+	--font-size-800: #{rem(34px)}; // not in use
+	--font-size-900: #{rem(38px)}; // not in use
 
   --header-font-family: var(--font-family-primary);
-  --header-font-weight: 600;
+  --header-font-weight: 500;
   --header-font-color: var(--color-secondary-800);
   --header-line-height: 1.2;
   --header-1-font-size: var(--font-size-700);
@@ -99,7 +99,7 @@
 	--container-spacing-y--none: 0;
 	--container-spacing-y--small: var(--spacing-500);
 	--container-spacing-y--medium: var(--spacing-600);
-	--container-spacing-y--large: var(--spacing-800);
+	--container-spacing-y--large: var(--spacing-700);
 	--container-indent-x: 0;
 
 	--border-radius-small: 3px;
@@ -163,8 +163,11 @@
 
 		--ce-spacing-block: var(--spacing-700); // Abstand zwischen Elementen zu Sonderelementen z.B. media-container
 
-		--font-size-600: #{rem(26px)};
-		--font-size-700: #{rem(38px)};
+		--header-1-font-size: var(--font-size-900);
+		--header-2-font-size: var(--font-size-800);
+		//--header-3-font-size: var(--font-size-500);
+
+		--font-size-default: #{rem(18px)};
   }
 }
 
