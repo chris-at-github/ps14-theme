@@ -58,7 +58,7 @@
 // >= 768px
 @include media-breakpoint-up(md) {
 	:root {
-		--hero-height: #{rem(400px)};
+		--hero-height: #{rem(900px)};
 		--hero-apect-ratio: auto;
 	}
 }
