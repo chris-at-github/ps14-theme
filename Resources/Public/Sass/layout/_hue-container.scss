@@ -3,6 +3,20 @@
 	background-color: var(--color-background);
 }
 
+.hue-container--secondary-100 {
+	//--color-font: var(--color-secondary-100);
+	--color-background: var(--color-secondary-100);
+	//--color-interactive: var(--color-secondary-100);
+	//--color-interactive-hover: #fff;
+}
+
+.hue-container--secondary-900 {
+	--color-font: var(--color-secondary-100);
+	--color-background: var(--color-secondary-900);
+	--color-interactive: var(--color-secondary-100);
+	--color-interactive-hover: #fff;
+}
+
 .hue-container--primary {
 	--color-font: var(--color-primary-50);
 	--color-background: var(--color-primary-500);
@@ -17,11 +31,4 @@
 	--link-active-color: #fff;
 	--link-active-box-shadow-color: #fff;
 	--link-active-box-shadow: 0 -2px 0px 0px inset var(--link-active-box-shadow-color);
-}
-
-.hue-container--secondary-light {
-	--color-font: var(--color-secondary-500);
-	--color-background: var(--color-secondary-50);
-	--color-interactive: var(--color-secondary-500);
-	--color-interactive-hover: var(--color-secondary-900);
 }
