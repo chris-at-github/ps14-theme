@@ -3,17 +3,6 @@
 	background-color: var(--color-background);
 }
 
-.hue-container--secondary-100 {
-	--color-background: var(--color-secondary-100);
-}
-
-//.hue-container--secondary-900 {
-//	--color-font: var(--color-secondary-100);
-//	--color-background: var(--color-secondary-900);
-//	--color-interactive: var(--color-secondary-100);
-//	--color-interactive-hover: #fff;
-//}
-
 .hue-container--primary-600 {
 	--color-font: #f8f3ee;
 	--color-background: var(--color-primary-600);
@@ -29,3 +18,25 @@
 	--link-active-box-shadow-color: #fff;
 	--link-active-box-shadow: 0 -2px 0px 0px inset var(--link-active-box-shadow-color);
 }
+
+.hue-container--secondary-100 {
+	--color-background: var(--color-secondary-100);
+}
+
+.hue-container--secondary-800 {
+	--color-font: var(--color-secondary-100);
+	--color-background: var(--color-secondary-800);
+	--color-interactive: var(--color-secondary-100);
+	--color-interactive-hover: var(--color-secondary-50);
+	--color-interactive-outline: #{hex-to-hsla(#fff, 0.5)};
+
+	--focus-outline-color: var(--color-interactive-outline);
+
+	--link-color: var(--color-secondary-100);
+	--link-box-shadow-color: var(--color-secondary-100);
+	--link-box-shadow: 0 -1px 0px 0px inset var(--link-box-shadow-color);
+	--link-active-color: var(--color-secondary-50);
+	--link-active-box-shadow-color: var(--color-secondary-50);
+	--link-active-box-shadow: 0 -2px 0px 0px inset var(--link-active-box-shadow-color);
+}
+
