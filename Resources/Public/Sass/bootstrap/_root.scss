@@ -68,11 +68,11 @@
 	--font-size-500: #{rem(21px)};
 	--font-size-600: #{rem(23px)};
 	--font-size-700: #{rem(28px)};
-	--font-size-800: #{rem(34px)}; // not in use
+	--font-size-800: #{rem(32px)}; // not in use
 	--font-size-900: #{rem(38px)}; // not in use
 
   --header-font-family: var(--font-family-primary);
-  --header-font-weight: 500;
+  --header-font-weight: 400;
   --header-font-color: var(--color-secondary-800);
   --header-line-height: 1.2;
   --header-1-font-size: var(--font-size-700);
