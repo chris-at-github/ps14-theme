@@ -1,0 +1,71 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@import "../variables";
+@import "../functions";
+@import "../mixins";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Accordion
+.accordion {
+	& {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	& > li {
+		border-bottom: 1px solid var(--color-secondary-100);
+	}
+
+	&__header {
+		& {
+			padding-left: var(--ce-indent-text-l);
+			padding-right: var(--ce-indent-text-r);
+		}
+
+		button {
+			& {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				width: 100%;
+				padding: rem(15px 0);
+				border: 0;
+				background: transparent;
+				font-size: var(--header-3-font-size);
+				font-weight: var(--header-font-weight);
+				text-align: left;
+				color: var(--color-font);
+				cursor: pointer;
+				hyphens: auto;
+				hyphenate-limit-chars: 10 3 4;
+			}
+
+			&[aria-expanded=true] {
+				svg {
+					transform: rotate(180deg);
+				}
+			}
+		}
+
+		svg {
+			display: block;
+			width: 19px;
+			height: 11px;
+			margin: 0 4px 0 0;
+			transition: transform var(--transition-duration-default);
+			fill: var(--color-font);
+			flex-shrink: 0;
+		}
+	}
+
+	.accordion__body-inner {
+		& {
+			padding: rem(0 0 20px 0);
+		}
+
+		& > *:first-child {
+			margin-top: 0;
+		}
+	}
+}

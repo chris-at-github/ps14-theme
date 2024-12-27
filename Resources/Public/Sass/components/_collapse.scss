@@ -1,0 +1,19 @@
+// ---------------------------------------------------------------------------------------------------------------------
+// Global
+@import "../variables";
+@import "../functions";
+@import "../mixins";
+
+// ---------------------------------------------------------------------------------------------------------------------
+// Collapse
+.collapse {
+	&:not(.show) {
+		display: none;
+	}
+}
+
+.collapsing {
+	height: 0;
+	overflow: hidden;
+	transition: height var(--transition-duration-default) ease;
+}
