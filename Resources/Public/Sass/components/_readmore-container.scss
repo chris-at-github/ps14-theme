@@ -1,0 +1,51 @@
+.readmore-container {
+	.readmore-container--collapse {
+		transition: max-height var(--transition-duration-default);
+		overflow: hidden;
+	}
+
+	.readmore-container--toggle {
+		& {
+			display: flex;
+			//height: rem(96px);
+			transition-property: transform, height, opacity;
+			transition-duration: var(--transition-duration-default);
+			transform: scale(1);
+			opacity: 1;
+		}
+
+		//button {
+		//	& {
+		//		position: relative;
+		//		//padding-left: rem(66px);
+		//	}
+		//
+		//	svg {
+		//		position: absolute;
+		//		top: rem(19px); left: rem(30px);
+		//		width: 24px;
+		//		height: 14px;
+		//		fill: #fff;
+		//	}
+		//}
+	}
+
+	&.readmore-container-open {
+		.readmore-container--toggle {
+			//transform: scale(0);
+			//height: 0;
+			opacity: 0;
+		}
+	}
+
+	&.readmore-container-opened {
+		.readmore-container--collapse {
+			overflow: visible;
+			max-height: inherit;
+		}
+
+		.readmore-container--toggle {
+			display: none;
+		}
+	}
+}
