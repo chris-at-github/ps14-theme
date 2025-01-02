@@ -51,6 +51,20 @@
 	}
 }
 
+.form__checkbox {
+	& {
+		display: grid;
+		grid-template-columns: rem(16px) 1fr;
+		grid-column-gap: rem(8px);
+		align-items: start;
+	}
+
+	&-label {
+		font-size: var(--font-size-300);
+		font-weight: var(--font-weight-semibold);
+	}
+}
+
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 576px
 @include media-breakpoint-up(sm) {
