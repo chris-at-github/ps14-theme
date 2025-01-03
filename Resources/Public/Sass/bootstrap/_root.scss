@@ -53,7 +53,7 @@
 	--focus-outline-size: 2px;
 	--focus-outline-style: solid;
 	--focus-outline-color: var(--color-interactive-outline);
-	--focus-outline-offset: 1px;
+	--focus-outline-offset: 2px;
 
 	--font-family-primary: 'Ubuntu', Arial, sans-serif;
 	--font-weight-normal: 400;
@@ -102,6 +102,7 @@
 	--container-spacing-y--large: var(--spacing-700);
 	--container-indent-x: 0;
 
+	--border-radius-tiny: 2px;
 	--border-radius-small: 3px;
 	--border-radius-medium: 8px;
 

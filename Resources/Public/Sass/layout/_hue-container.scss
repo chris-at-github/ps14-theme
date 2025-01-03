@@ -8,7 +8,8 @@
 	--color-background: var(--color-primary-600);
 	--color-interactive: #f8f3ee;
 	--color-interactive-hover: #fff;
-	--color-interactive-outline: #{hex-to-hsla(#fff, 0.5)};
+	--color-interactive-outline: #{hex-to-hsla(#fff, 0.75)};
+	--color-interactive-focus: #fff;
 
 	--focus-outline-color: var(--color-interactive-outline);
 
