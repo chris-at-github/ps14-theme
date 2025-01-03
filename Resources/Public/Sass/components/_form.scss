@@ -55,6 +55,39 @@
 	}
 }
 
+.form__field--textfield,
+.form__field--textarea {
+	& {
+		display: flex;
+		border: 0;
+		border-radius: var(--border-radius-small);
+		outline: rem(2px) solid var(--color-primary-200);
+		outline-offset: -2px;
+		box-shadow: 0 0 0 rem(3px) var(--color-primary-600);
+		color: var(--color-secondary-700);
+		transition-duration: all var(--transition-duration-default);
+	}
+
+	&::placeholder {
+		color: var(--color-secondary-700);
+	}
+
+	&:focus {
+		outline-color: #fff;
+		box-shadow: 0 0 0 rem(3px) var(--color-primary-900);
+		color: var(--color-secondary-900);
+	}
+}
+
+.form__field--textfield {
+	min-height: rem(48px);
+	padding: 0 var(--spacing-400);
+}
+
+.form__field--textarea {
+	padding: var(--spacing-400);
+}
+
 .form__checkbox {
 	& {
 		display: grid;
