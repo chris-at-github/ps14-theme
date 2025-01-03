@@ -5,12 +5,16 @@
 .form__page {
 	& {
 		display: grid;
-		grid-template-columns: repeat(12, 1fr);
+		grid-template-columns: 1fr;
 		grid-gap: rem(32px) rem(32px);
 		align-items: end;
 	}
 
-	&--space-before {
+	&--space-before-default {
+		margin-top: rem(32px);
+	}
+
+	&--space-before-medium {
 		margin-top: var(--spacing-700);
 	}
 }
@@ -30,24 +34,24 @@
 	}
 
 	&--width-25 {
-		grid-column: auto / span 12;
+		grid-column: auto / span 1;
 	}
 
 	&--width-33 {
-		grid-column: auto / span 12;
+		grid-column: auto / span 1;
 	}
 
 	&--width-50 {
-		grid-column: auto / span 12;
+		grid-column: auto / span 1;
 	}
 
 	&--width-75 {
-		grid-column: auto / span 12;
+		grid-column: auto / span 1;
 	}
 
 	&--width-0,
 	&--width-100 {
-		grid-column: auto / span 12;
+		grid-column: auto / span 1;
 	}
 }
 
@@ -68,6 +72,10 @@
 // ---------------------------------------------------------------------------------------------------------------------
 // >= 576px
 @include media-breakpoint-up(sm) {
+	.form__page {
+		grid-template-columns: repeat(12, 1fr);
+	}
+
 	.form__item {
 		&--width-25 {
 			grid-column: auto / span 6;
@@ -80,6 +88,21 @@
 		&--width-50 {
 			grid-column: auto / span 6;
 		}
+
+		&--width-75 {
+			grid-column: auto / span 12;
+		}
+
+		&--width-0,
+		&--width-100 {
+			grid-column: auto / span 12;
+		}
+	}
+
+	.form__checkbox {
+		&-label {
+			width: max-content;
+		}
 	}
 }
 
@@ -87,7 +110,7 @@
 // >= 768px
 @include media-breakpoint-up(md) {
 	.form__page {
-		&--space-before {
+		&--space-before-medium {
 			margin-top: rem(80px);
 		}
 	}
