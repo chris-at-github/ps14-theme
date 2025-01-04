@@ -69,13 +69,15 @@
   // Abstaende
   &--space-before-small,
   &--space-before-medium,
-  &--space-before-large {
+  &--space-before-large,
+  &--space-before-huge {
     padding-top: 0.1px; // eventuelle Margins innerhalb spannen den Container auf
   }
 
   &--space-after-small,
   &--space-after-medium,
-  &--space-after-large {
+  &--space-after-large,
+  &--space-after-huge {
     padding-bottom: 0.1px; // eventuelle Margins innerhalb spannen den Container auf
   }
 
@@ -91,6 +93,10 @@
     margin-top: var(--container-spacing-y--large);
   }
 
+  &--space-before-huge > &__inner {
+    margin-top: var(--container-spacing-y--huge);
+  }
+
   &--space-after-small > &__inner {
     margin-bottom: var(--container-spacing-y--small);
   }
@@ -101,6 +107,10 @@
 
   &--space-after-large > &__inner {
     margin-bottom: var(--container-spacing-y--large);
+  }
+
+  &--space-after-huge > &__inner {
+    margin-bottom: var(--container-spacing-y--huge);
   }
 }
 
