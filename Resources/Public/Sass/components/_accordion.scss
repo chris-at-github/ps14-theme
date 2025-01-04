@@ -14,7 +14,18 @@
 	}
 
 	& > li {
-		border-bottom: 1px solid var(--color-secondary-100);
+		//& {
+		//	position: relative;
+		//}
+
+		&::after {
+			content: '';
+			display: block;
+			border-bottom: 1px solid var(--color-secondary-100);
+			margin-left: var(--ce-indent-text-l);
+			margin-right: var(--ce-indent-text-r);
+		}
+		//border-bottom: 1px solid var(--color-secondary-100);
 	}
 
 	&__header {
@@ -50,12 +61,14 @@
 
 		svg {
 			display: block;
-			width: 19px;
-			height: 11px;
+			width: 24px;
+			height: 24px;
 			margin: 0 4px 0 0;
 			transition: transform var(--transition-duration-default);
-			fill: var(--color-font);
+			color: var(--color-primary-600);
 			flex-shrink: 0;
+
+			//background: gold;
 		}
 	}
 
