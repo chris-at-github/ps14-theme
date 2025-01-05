@@ -166,7 +166,7 @@
 
 		--ce-spacing-block: var(--spacing-700); // Abstand zwischen Elementen zu Sonderelementen z.B. media-container
 
-		--header-1-font-size: var(--font-size-900);
+		--header-1-font-size: #{rem(48px)};
 		--header-2-font-size: var(--font-size-800);
 		//--header-3-font-size: var(--font-size-500);
 
