@@ -80,11 +80,42 @@ a {
   &__navigation {
     justify-self: end;
     display: flex;
+    gap: rem(8px);
     padding: var(--spacing-400) 0 0 0;
+  }
+
+  &__booking-request {
+    &-link {
+      & {
+        display: flex;
+        align-items: center;
+        gap: rem(8px);
+        padding: rem(4px 12px);
+        border-radius: var(--border-radius-small);
+        background: var(--color-secondary-100);
+        color: var(--color-secondary-700);
+        font-size: var(--font-size-300);
+        font-weight: var(--font-weight-semibold);
+        text-decoration: none;
+        transition: all var(--transition-duration-default);
+      }
+
+      &:hover, &:focus-visible {
+        background: var(--color-primary-600);
+        color: var(--color-primary-50);
+      }
+    }
+
+    &-icon {
+      width: rem(16px);
+      height: rem(16px);
+    }
   }
 }
 
 .navigation--language {
+  --navigation-group-margin: 0;
+
   --navigation-item-background: var(--color-secondary-100);
   --navigation-item-font-color: var(--color-secondary-700);
   --navigation-item-font-size: var(--font-size-300);
