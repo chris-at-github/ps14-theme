@@ -33,6 +33,7 @@ a {
   flex-direction: column;
   min-height: 100vh;
   padding-top: var(--page-body-offset);
+  padding-bottom: rem(79px);
 }
 
 .page__main {
@@ -85,6 +86,10 @@ a {
   }
 
   &__booking-request {
+    & {
+      display: none;
+    }
+
     &-link {
       & {
         display: flex;
@@ -146,9 +151,67 @@ a {
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
+// Sticky Booking
+.sticky-booking-request {
+  & {
+    position: fixed;
+    bottom: 0;
+    left: 0; right: 0;
+    z-index: 100;
+    padding: rem(16px) var(--container-spacing-x);
+    border-top: 2px solid var(--color-secondary-100);
+    background: var(--color-secondary-50);
+  }
+
+  &__link {
+    & {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: rem(16px);
+      padding: rem(6px 12px);
+      border: 2px solid var(--color-primary-600);
+      border-radius: var(--border-radius-small);
+      background: var(--color-primary-600);
+      color: var(--color-primary-50);
+      font-size: var(--font-size-400);
+      font-weight: var(--font-weight-semibold);
+      text-decoration: none;
+      transition: all var(--transition-duration-default);
+    }
+
+    &:hover, &:focus-visible {
+      background: #fff;
+      color: var(--color-primary-600);
+    }
+  }
+
+  &__icon {
+    width: rem(16px);
+    height: rem(16px);
+  }
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
 // Footer Navigation
 .navigation-footer {
   --navigation-item-font-weight: var(--font-weight-semibold);
+}
+
+// ---------------------------------------------------------------------------------------------------------------------
+// >= 576px
+@include media-breakpoint-up(sm) {
+  .page {
+    padding-bottom: 0;
+  }
+
+  .page-header__booking-request {
+    display: block;
+  }
+
+  .sticky-booking-request {
+    display: none;
+  }
 }
 
 // ---------------------------------------------------------------------------------------------------------------------
